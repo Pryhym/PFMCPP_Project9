@@ -54,7 +54,7 @@ struct Wrapper
 
     void print()
     {
-        std::cout<<"Wrapper::print(" <<val<< ")"<<std::endl;
+        std::cout<<"Wrapper::print(" << val << ")"<<std::endl;
     }
 
     Type val;
@@ -71,7 +71,7 @@ struct Wrapper<Point>
 
     void print()
     {
-        std::cout<<"Wrapper::print(" <<val.toString() << ")"<<std::endl;
+        std::cout<<"Wrapper::print(" << val.toString() << ")"<<std::endl;
     }
 
     Type val;
