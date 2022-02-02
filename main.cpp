@@ -66,7 +66,7 @@ void Wrapper<Point>::print()
     std::cout << "Wrapper::print(" << val.toString() << ")" << std::endl;
 }
 
-
+void variadicHelper();
 
 template<typename T, typename ...Args>
 void variadicHelper(T&& first, Args&& ... everythingElse)
@@ -75,12 +75,9 @@ void variadicHelper(T&& first, Args&& ... everythingElse)
     variadicHelper( std::forward<Args>(everythingElse) ... );
 }
 
-template<typename T, typename ...Args>
-void VariadicHelper()
+void variadicHelper()
 {
-    Wrapper wrapper(std::forward<T>());
-    wrapper.print();
-    variadicHelper( std::forward<Args>() ... );
+   
 }
 
 /*
